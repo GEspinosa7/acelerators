@@ -1,5 +1,12 @@
 create database acelerator;
 
+create table if not exists users(
+   id serial primary key,
+   username text not null,
+   email text not null unique,
+   pass text not null
+);
+
 create table if not exists types(
   id serial not null primary key,
   title varchar(150) not null
